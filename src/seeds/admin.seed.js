@@ -9,13 +9,12 @@ const adminSeeder=async()=>{
        console.log("Super Admin already exists.")
        return
     }
-    const hashedPassword=await bcrypt.hash( process.env.ADMIN_PASSWORD,10)
     await User.create({
             firstName: process.env.ADMIN_FIRST_NAME,
             lastName: process.env.ADMIN_LAST_NAME,
             userName: process.env.ADMIN_USERNAME,
             email: process.env.ADMIN_EMAIL,
-            password: hashedPassword,
+            password: process.env.ADMIN_PASSWORD,
             role: ROLES.SUPER_ADMIN})
      console.log("Super Admin created successfully.")
   } catch (error) {
