@@ -10,8 +10,8 @@ const UserResource={
     actions:commonActions,
     listProperties:[ "firstName",  "lastName", "email", "role",  "lastLogin"],
     filterProperties:["email", "role"],
-    editProperties:[ "firstName",  "lastName", "email", "role",  "username", "avatar"],
-    showProperties:[ "_id", "firstName",  "lastName", "email", "role",  "username", "avatar", "createdAt","updatedAt",  "lastLogin"],
+    editProperties:[ "firstName",  "lastName", "email", "role",  "userName", "avatar"],
+    showProperties:[ "_id", "firstName",  "lastName", "email", "role",  "userName", "avatar", "createdAt","updatedAt",  "lastLogin"],
     properties:{
       password:{isVisible:false},
       ...commonProperties
