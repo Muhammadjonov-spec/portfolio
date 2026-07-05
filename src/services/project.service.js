@@ -18,6 +18,9 @@ class ProjectService{
   async getFeatured(){
     return await ProjectRepository.getFeaturedProjects()
   }
+  async getBySlug(slug){
+    return await ProjectRepository.findOne({slug, published:true})
+  }
   async getById(id){
     const project=await ProjectRepository.findById(id)
     if(!project){throw new ApiError(404, "Project not found.")}

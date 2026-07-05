@@ -7,11 +7,13 @@ const createUploadFeature = (bucket, property = "image") => {
     provider: {local:localProvider(bucket)},
     validation: {mimeTypes: ["image/png", "image/jpeg", "image/webp", "image/svg+xml"]},
     properties: {
+      file: 'file',
       key: property,
-      mimeType:"imageMime",
-      filePath:"imagePath"
+      key: `${propertyName}Path`,     
+      mimeType: `${propertyName}Mime`, 
+      filePath: propertyName    
     }
   })
 }
 
-export default createUploadFeature
+export default uploadFeature

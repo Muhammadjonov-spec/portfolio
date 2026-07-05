@@ -2,7 +2,7 @@ import User from "../../models/User.model.js"
 import navigation from "../helpers/navigation.js"
 import commonActions from "../helpers/commonActions.js"
 import commonProperties from "../helpers/commonProperties.js"
-import { actions } from "adminjs"
+
 const UserResource={
   resource:User,
   options:{

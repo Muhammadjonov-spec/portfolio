@@ -9,8 +9,13 @@ class ProjectController{
    })
   getAll=asyncHandler(async(req, res)=>{
     const project=await ProjectService.getAll()
-    res.json({success:true, data:project})
+    return res.status(200).json({success:true, data:project})
    })
+  getBySlug=asyncHandler(async(req, res)=>{
+     const project = await ProjectService.getBySlug(req.params.slug)
+
+     res.json({success:true, data:project})
+  })
   getFeatured = asyncHandler(async (req, res) => {
     const project=await ProjectService.getFeatured()
     res.json({success:true, data:project})

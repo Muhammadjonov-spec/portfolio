@@ -1,5 +1,3 @@
-import { BulkDelete } from "adminjs";
-
 const commonActions={
   new:{isAccessible:true},
   edit:{isAccessible:true},

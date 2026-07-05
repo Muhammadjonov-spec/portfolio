@@ -2,8 +2,8 @@ import mongoose from "mongoose";
 const {ObjectId}=mongoose.Schema.Types
 
 const baseFields={
-  createdBy: {type: ObjectId, ref: "User", default: null},
-  updatedBy: {type: ObjectId, ref: "User", default: null},
+  createdBy: {type: ObjectId, ref: "PoUser", default: null},
+  updatedBy: {type: ObjectId, ref: "PoUser", default: null},
   isDeleted: { type: Boolean, default: false}
 }
 
