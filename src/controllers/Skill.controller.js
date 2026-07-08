@@ -11,4 +11,4 @@ class SkillController {
   }
 }
 
-export default new SkillController
+export default new SkillController()

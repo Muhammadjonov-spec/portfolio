@@ -4,7 +4,7 @@ import baseOptions from "./base/baseOptions.js";
 const EducationSchema=new mongoose.Schema({
   institution: { type: String, required: true, trim: true},
   slug: { type: String, required: true, unique: true, lowercase: true, trim: true},
-  degree: { type: String, required: true, trim: tru },
+  degree: { type: String, required: true, trim: true },
   field: {  type: String, default: null,  trim: true},
   description: {  type: String,  default: null,  trim: true},
   logo: {  type: String,  default: null},

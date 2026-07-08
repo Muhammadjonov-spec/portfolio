@@ -1,4 +1,3 @@
-import { response } from "express";
 import ExperienceService from "../../services/Experience.service.js";
 
 const experienceAfterHook = async (response, request, context)=>{
