@@ -6,17 +6,17 @@ import SkillBeforeHook from "../actions/skill.before.js";
 import skillAfterHook from "../actions/skill.after.js";
 import softDeleteAction from "../actions/softDelete.action.js"
 import restoreAction from "../actions/restore.action.js"
-
+import componentLoader from "../componentLoader.js";
 const skillResource={
   resource:Skill,
-  features:[createUploadFeature("uploads/skills", "icon")],
+  features:[createUploadFeature("uploads/skills", "icon", componentLoader)],
 
   options:{
     navigation:navigation.portfolio,
     sort:{sortBy:"sortOrder", direction:"asc"},
     listProperties:["name", "category", "level", "published", "sortOrder"],
     filterProperties:["category", "published"],
-    editProperties:["name", "category", "level", "color", "icon", "published", "sortOrder"],
+    editProperties:["name", "category", "level", "color", "file", "published", "sortOrder"],
     showProperties:["name", "category", "level", "color", "icon", "published", "sortOrder", "createdAt", "updatedAt"],
     properties:{
       slug:{isVisible:false},

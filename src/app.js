@@ -8,6 +8,7 @@ import projectRoutes from "./routes/project.route.js"
 import notFound from "./middlewares/notFound.js"
 import errorHandler from "./middlewares/errorHandler.js"
 import skillRoutes from "./routes/skill.route.js"
+import experienceRoutes from "./routes/experience.routes.js"
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -19,6 +20,7 @@ app.use("/admin", adminRouter)
 app.use("/api/auth", authRoutes)
 app.use("/api/projects", projectRoutes)
 app.use("/api/skills", skillRoutes)
+app.use("/api/experiences", experienceRoutes)
 app.use(notFound)
 app.use(errorHandler)
 export default app
